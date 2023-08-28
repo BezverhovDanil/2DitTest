@@ -1,3 +1,46 @@
-body{
-    max-width: 1200px;
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.description {
+    flex: 1;
+    padding-right: 5%;
+}
+
+.accordeon {
+    margin-bottom: 10px;
+    border: 3px solid #C6CDDA;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.accordeon .content {
+    display: flex;
+    align-items: center;
+}
+
+.accordeon .content img {
+    margin-right: 5px;
+}
+
+.accordeon:hover {
+    background-color: #f5f5f5;
+}
+
+.accordeon p, .accordeon ins  {
+    margin: 0;
+}
+
+.accordeon p {
+    display: none;
+}
+
+.accordeon.active {
+    background-color: #e0e0e0;
+}
+
+.accordeon.active p {
+    display: block;
 }
