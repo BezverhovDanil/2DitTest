@@ -1,3 +1,7 @@
+body{
+    padding:0;
+    margin: 0;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto; /* Добавляем эту строку для горизонтального центрирования */
@@ -93,4 +97,24 @@
 .card-product{
     margin: 0;
     padding: 0;
+}
+.number4{
+    margin: 0;
+    padding: 5%;
+    border:0;
+    background-image: url(/img/redBackground.png);
+}
+.container-new{
+    max-width:1200px;
+    display: flex;
+    justify-content: center;
+}
+.form{
+    
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+.formcolor{
+    color:white;
 }
