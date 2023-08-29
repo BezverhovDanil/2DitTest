@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
     <title>Document</title>
@@ -241,28 +242,96 @@
        
 
     </section>
-    Задание №4
+    <h1>Задание №4</h1>
     <main class="number4">
         <h1 class="form">Оставите заявку</h1>
         
-       <p class="formcolor"> И наш специалист свяжется с вами</p>
-       <form action="">
-        <input type="text" id="name" name="Ваше имя">
-       </form>
+       <p> И наш специалист свяжется с вами</p>
+       
+       <form class="formcolor"  method="POST" action="sendForm.php">
         
-        +7
-        Эл. почта
-        Нажимая кнопку, я принимаю пользовательское соглашение, соглашаюсь с политикой конфиденциальности, условиями пользования сайтом, передачей и обработкой моих персональных данных
-        Оформить заявку
+        
+        <input type="text" placeholder="Ваше имя" name="firstname">
+        
+        
+        
+        <input type="tel" id="phone" name="phone" value="+7(111)-111-11-11" class="formPhone" oninput="formatPhoneNumber(this)">
+        
+        <input type="email" id="email" name="email" placeholder="Эл.почта">
+        <div class="agreeAndButton">
+            
+            <div class="cd agreeForm">
+            <div class="agree">Нажимая кнопку, я принимаю пользовательское соглашение, соглашаюсь с политикой конфиденциальности, условиями пользования сайтом, передачей и обработкой моих персональных данных</div>
+            </div>
+            <div class="cd buttonFormm">
+                <button class="buttonForm" type="submit">Оформить заявку</button>
+            </div>
+        </div>
+        
+        </form>
+        
+        
+        
     </main>
-    <script>
-        let accordeon = document.querySelectorAll('.accordeon');
-    
-        accordeon.forEach(clickAccordeon => {
-            clickAccordeon.addEventListener('click', () => {
-                clickAccordeon.classList.toggle('active');
+    <section>
+        <h1>Задание №5</h1>
+        
+        <div class="chart-container">
+            <div id="chart-center-text">335 шт.</div>
+            <canvas id="cityChart"></canvas>
+            
+            
+            
+        </div>
+        
+    </section>
+        <script>
+            let accordeon = document.querySelectorAll('.accordeon');
+        
+            accordeon.forEach(clickAccordeon => {
+                clickAccordeon.addEventListener('click', () => {
+                    clickAccordeon.classList.toggle('active');
+                });
             });
-        });
-    </script>
+        
+            function formatPhoneNumber(input) {
+                const phoneNumber = input.value.replace(/\D/g, ''); 
+                if (phoneNumber.length <= 10) {
+                    input.value = '+7(' + phoneNumber.slice(0, 3) + ')' + '-' + phoneNumber.slice(3, 6) + '-' + phoneNumber.slice(7, 10);
+                }
+            }
+        
+            var ctx = document.getElementById('cityChart').getContext('2d');
+        
+            var cityData = {
+                labels: ['- Россия', '- Казахстан', '- Узбекистан'],
+                
+                datasets: [{
+                    data: [200, 100, 35], 
+                    pointStyle: 'circle',
+                    pointRadius: 6,
+                    backgroundColor: ['#E83C46', '#F9A620', '#474444'], 
+                    
+                }]
+            };
+        
+            var cityChart = new Chart(ctx, {
+                type: 'doughnut', 
+                data: cityData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom', // Переместить легенду вниз
+                            labels: {
+                                boxHeight: 20, // Установить высоту блока меток
+                            }
+                        }
+                    },
+                    
+                }
+            });
+        </script>
 </body>
 </html>
