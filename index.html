@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
 
 
     <title>Document</title>
@@ -242,6 +243,23 @@
        
 
     </section>
+    <h1>Задание №3</h1>
+    <section>
+        <div class="bank1">
+            <div class="bankdiv">
+                <h3>.01</h3>
+                <h1 class="company">С РАСЧЕТНОГО СЧЕТА <span class="half-white">КОМПАНИИ</span></h1>
+                <p class="bankinfo">Diam aliquam quis blandit sollicitudin sit ut venenatis dictum fusce gravida, porta commodo natoque tristique magna massa laoreet luctus. Ligula per justo condimentum et ut dignissim ipsum, consequat tristique sollicitudin convallis bibendum risus lorem nostra, cubilia purus odio tincidunt amet euismod. Luctus nascetur urna adipiscing nisl libero bibendum maecenas accumsan mi, ligula consectetur congue nam magnis posuere purus. Himenaeos habitasse nunc sociosqu erat aliquam class justo porta dictumst, pulvinar id dignissim facilisi dolor tincidunt in non tellus, nam posuere laoreet turpis diam ut placerat lacus. Facilisi nec sagittis interdum blandit urna turpis sociosqu risus, viverra class odio aliquet cras morbi nunc egestas convallis, habitasse mollis mi maximus donec congue commodo. Rutrum  turpis diam ut placerat lacus. Facilisi nec sagittis interdum blandit urna turpis sociosqu risus, viverra class odio aliquet cras morbi nunc egestas convallis, habitasse mollis mi maximus donec congue commodo. Rutrum</p>
+                
+            </div>
+            <div class="bankdiv">
+                <img src="img/bank1.png" alt=""> 
+            </div>
+        </div>
+        
+        <img src="img/bank2.png" alt="">
+        
+    </section>
     <h1>Задание №4</h1>
     <main class="number4">
         <h1 class="form">Оставите заявку</h1>
@@ -285,53 +303,39 @@
         </div>
         
     </section>
-        <script>
-            let accordeon = document.querySelectorAll('.accordeon');
-        
-            accordeon.forEach(clickAccordeon => {
-                clickAccordeon.addEventListener('click', () => {
-                    clickAccordeon.classList.toggle('active');
-                });
-            });
-        
-            function formatPhoneNumber(input) {
-                const phoneNumber = input.value.replace(/\D/g, ''); 
-                if (phoneNumber.length <= 10) {
-                    input.value = '+7(' + phoneNumber.slice(0, 3) + ')' + '-' + phoneNumber.slice(3, 6) + '-' + phoneNumber.slice(7, 10);
-                }
-            }
-        
+    <script>
             var ctx = document.getElementById('cityChart').getContext('2d');
         
-            var cityData = {
-                labels: ['- Россия', '- Казахстан', '- Узбекистан'],
-                
-                datasets: [{
-                    data: [200, 100, 35], 
-                    pointStyle: 'circle',
-                    pointRadius: 6,
-                    backgroundColor: ['#E83C46', '#F9A620', '#474444'], 
+                var cityData = {
+                    labels: ['- Россия', '- Казахстан', '- Узбекистан'],
                     
-                }]
-            };
-        
-            var cityChart = new Chart(ctx, {
-                type: 'doughnut', 
-                data: cityData,
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: {
-                            position: 'bottom', // Переместить легенду вниз
-                            labels: {
-                                boxHeight: 20, // Установить высоту блока меток
+                    datasets: [{
+                        data: [200, 100, 35], 
+                        pointStyle: 'circle',
+                        pointRadius: 6,
+                        backgroundColor: ['#E83C46', '#F9A620', '#474444'], 
+                        
+                    }]
+                };
+            
+                var cityChart = new Chart(ctx, {
+                    type: 'doughnut', 
+                    data: cityData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom', // Переместить легенду вниз
+                                labels: {
+                                    boxHeight: 20, // Установить высоту блока меток
+                                }
                             }
-                        }
-                    },
-                    
-                }
-            });
-        </script>
+                        },
+                        
+                    }
+                });
+    </script>
+    
 </body>
 </html>

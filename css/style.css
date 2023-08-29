@@ -199,3 +199,28 @@ input::-webkit-input-placeholder { color: white; }
 .orange{
     color: #EB7979;
 }
+.bankdiv{
+    
+    width: 50%;
+}
+.bankinfo{
+    width:50%;
+}
+.bank1{
+    display: flex;
+    align-items: flex-start;
+}
+.company{
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 43px;
+    position: relative;
+    left: 24%;
+    
+    
+}
+.half-white {
+    background: linear-gradient(to right, black 16%, white 100%, transparent 100%, transparent 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
