@@ -104,6 +104,7 @@ body{
     border:0;
     background-image: url(/img/redBackground.png);
     color:white;
+    font-family:Arial, Helvetica, sans-serif
 }
 .container-new{
     max-width:1200px;
@@ -152,33 +153,49 @@ input{
     color:white;
     border: 1px solid;
     padding: 1%;
-    
+    padding-right: 14%;
+    margin-right: 2%;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.418);
     background-color: rgba(251, 233, 255, 0.218);
+    font-size: 16px;
     
     
 }
 .agree{
-    width:49%;
+    width:88%;
 }
 input::-webkit-input-placeholder { color: white; }
 .buttonForm{
     background: white;
     color:black;
     border: 0px;
-    padding: 15%;
+    padding: 3%;
     
     
    
 }
 .cd{
-    display: inline-block;
+    display: inline-grid;
+    align-items: flex-start;
 
     
 }
 .agreeForm{
-    width: 30%;
+    width: 54.3%;
 }
-.buttonFormm{
-    width: 30%;
+.buttonFormm {
+    width: 27.5%;
+}
+.agreeAndButton{
+    padding-top: 1%;
+}
+.russiaFlag{
+    position: relative;
+    left: 3%;
+}
+.numberPhone{
+    text-align: center;
+}
+.orange{
+    color: #EB7979;
 }
