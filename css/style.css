@@ -10,7 +10,9 @@ body{
     align-items: baseline;
     flex-wrap: wrap;
 }
-
+.task{
+    font-family: Arial, Helvetica, sans-serif;
+}
 .description {
    
     padding-right: 5%;
@@ -97,6 +99,26 @@ body{
 .card-product{
     margin: 0;
     padding: 0;
+    color: #264E58;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif
+}
+.sales{
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 3%;
+    
+}
+.pizzaSales{
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 3%;
+    
+}
+.categoryproduct{
+    font-size: 13px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #6E6659;
 }
 .number4{
     margin: 0;
@@ -120,17 +142,26 @@ body{
 .formcolor{
     color:white;
 }
-.chart-container {
+.chart-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: relative;
-    border: 2px solid rgb(224, 224, 224);
-    border-radius: 100px;
-    width: 20%;
+    
 }
 
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 10px 10px 5px rgb(185, 185, 185);
+    border-radius: 100px;
+    width: 20%;
+    margin-right: 10px;
+    padding: 2%;
+}
+.pizzainline{
+    display: inline-block;
+}
 #chart-center-text {
     margin: 0;
     padding: 0;
@@ -140,10 +171,23 @@ body{
     transform: translate(-50%, -50%);
     z-index: 2;
 }
+.priceCard{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6E6659;
+}
+.spanCard{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6E6659;
+    font-weight: bolder;
+}
 
 #cityChart {
     position: relative;
     z-index: 1;
+    width: 100%;
+    height: 100%;
 }
 .formPhone{
     text-decoration: underline;
@@ -181,7 +225,7 @@ input::-webkit-input-placeholder { color: white; }
     
 }
 .agreeForm{
-    width: 54.3%;
+    width: 59%;
 }
 .buttonFormm {
     width: 27.5%;
@@ -203,18 +247,23 @@ input::-webkit-input-placeholder { color: white; }
     
     width: 50%;
 }
-.bankinfo{
-    width:50%;
+.bankinfo {
+    width: 54%;
+    border-left: 2px solid black;
+    padding: 2%;
+    left: 1;
+    margin-left: 39%;
 }
 .bank1{
     display: flex;
     align-items: flex-start;
+    padding-bottom: 3%;
 }
 .company{
     font-family: 'Arial Narrow', Arial, sans-serif;
     font-size: 43px;
     position: relative;
-    left: 24%;
+    left: 39.5%;
     
     
 }
@@ -224,3 +273,91 @@ input::-webkit-input-placeholder { color: white; }
     -webkit-background-clip: text;
     color: transparent;
   }
+  .company2{
+    width: 90%;
+    text-align: left;
+    position: relative;
+    font-size: 43px;
+    right:24%;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+  }
+  .bankdiv2{
+    width: 50%;
+    text-align: right;
+  }
+  .bankColorWhite{
+    color:white;
+    background: linear-gradient(to left, black 82%, white 100%, transparent 100%, transparent 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .bankColorWhitee{
+    color:white;
+   }
+   .bankinfo2{
+    width: 50%;
+    border-left: 2px solid black;
+    margin-left: 2%;
+    text-align:left;
+    padding: 2%;
+   }
+   .banknumber {
+       text-align: center;
+       width: 70%;
+       font-size: xx-large;
+       position: relative;
+       
+       
+   }
+   .banknumberr {
+       text-align: left;
+       width: 70%;
+       font-size: xx-large;
+       position: relative;
+       right: 30%;
+       color:white;
+   }
+   .chartCount{
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+   }
+   .chartSpan{
+    font-size: 20px;
+    text-align: right;
+    font-family: Arial, Helvetica, sans-serif;
+    
+   }
+   @media screen and (max-width: 1835px) {
+        .bank1 {
+            flex-direction: row;
+            justify-content: space-between; /* Распределение блоков по ширине */
+            align-items: flex-start;
+        }
+        .bankinfo2 {
+            width: 100%;
+            border-left: 2px solid black;
+            margin-left: 2%;
+            text-align: left;
+            padding: 2%;
+        }
+        .company{
+            display:none;
+        }
+        .bankinfo {
+            width: 100%;
+            border-left: 2px solid black;
+            padding: 2%;
+            left: 1;
+            margin-left: 39%;
+        }
+        .company2{
+            display:none;
+        }
+        
+        .imgBank{
+            display: none;
+        }
+    }
+  
